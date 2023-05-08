@@ -73,6 +73,32 @@ public class Sort {
 
     }
 
+    public void insertionSort(int[] array, int order) {
+        if (order == 0) {
+
+            for (int i = 1; i < array.length; i++) {
+                int current = array[i];
+                int currentPlace = i;
+                for (int j = i - 1; j >= 0 && array[j] > current; j--) {
+                    array[j + 1] = array[j];
+                    currentPlace = j;
+                }
+                array[currentPlace] = current;
+
+            }
+        } else if (order == 1)
+            for (int i = 1; i < array.length; i++) {
+                int current = array[i];
+                int currentPlace = i;
+                for (int j = i - 1; j >= 0 && array[j] > current; j--) {
+                    array[j + 1] = array[j];
+                    currentPlace = j;
+                }
+                array[currentPlace] = current;
+
+            }
+    }
+
     private void swap(int array[], int index1, int index2) {
         var temp = array[index1];
         array[index1] = array[index2];
