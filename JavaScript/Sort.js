@@ -25,6 +25,18 @@ function bubbleSort(array, order) {
     }
   }
 }
+
+function insertionSort(array) {
+  for (let i = 1; i < array.lenght; i++) {
+    let current = array[i];
+    let currentPlace = i;
+    for (let j = i - 1; j >= 0 && array[j] > current; j--) {
+      currentPlace = j;
+    }
+    array[currentPlace] = current;
+  }
+}
+
 function swap(array, index1, index2) {
   let temp = array[index1];
   array[index1] = array[index2];
